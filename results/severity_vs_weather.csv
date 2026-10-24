@@ -1,0 +1,11 @@
+Weather_Conditions,Fatal,Serious,Slight
+Data missing or out of range,2,5,80
+Fine + high winds,110,758,4341
+Fine no high winds,4961,46579,311162
+Fog or mist,54,320,1918
+Other,111,1118,10163
+Raining + high winds,73,675,4796
+Raining no high winds,525,5959,47216
+Snowing + high winds,3,62,455
+Snowing no high winds,27,320,3508
+Unknown,48,534,6728

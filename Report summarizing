@@ -1,0 +1,39 @@
+# Task 5 – Docker Report
+
+## 1. Usefulness of Docker in Data Science
+
+Docker is a containerization platform that helps data scientists create consistent and reproducible environments for their projects. It packages an application and its dependencies into a portable image, allowing it to run on different machines with fewer compatibility problems.
+
+The main advantages of Docker in data science are:
+
+- **Reproducibility:** The same software environment can be recreated on different computers.
+- **Portability:** Applications can run on any compatible system with Docker installed.
+- **Dependency isolation:** Each project can use its own libraries and versions.
+- **Scalability:** Multiple containers can run the same application.
+- **Collaboration:** Team members can share images and use the same environment.
+
+In this project, Docker was used to package and run a Python-based UK road safety data analysis application.
+
+## 2. Difference Between Docker Image and Docker Container
+
+A **Docker Image** is a read-only template that contains the application code, dependencies, and instructions needed to run an application.
+
+A **Docker Container** is a running or stopped instance of a Docker image. It provides an isolated environment in which the application executes.
+
+For example, the image `uk-road-safety-analysis:v1` contains the Python application and its dependencies. A container created from this image executes the road safety analysis.
+
+## 3. Dockerfile Directives
+
+The Dockerfile defines how the application image is built.
+
+| Directive | Description | Project example |
+|---|---|---|
+| `FROM` | Specifies the base image. | `FROM python:3.11-slim` |
+| `WORKDIR` | Sets the working directory inside the image. | `WORKDIR /app` |
+| `COPY` | Copies files from the build context into the image. | `COPY requirements.txt .` |
+| `RUN` | Executes commands during image construction. | `RUN pip install --no-cache-dir -r requirements.txt` |
+| `CMD` | Specifies the default command executed when a container starts. | `CMD ["python", "app.py"]` |
+
+### Conclusion
+
+Docker makes data science projects easier to reproduce, distribute, and execute in consistent environments. In this project, Docker was used to build an image, publish it to Docker Hub, run multiple containers, and manage the analysis service using Docker Compose.
